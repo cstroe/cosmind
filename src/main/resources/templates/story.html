@@ -21,20 +21,11 @@
 
 <body>
 
-Stories:
-<p th:each="story : ${stories}">
-    <a href="#" th:href="@{|/story/${story.id}|}">
-        <span th:text="${story.summary}">summary</span> -
-        <span th:text="${story.description}">description</span>
-    </a>
+<p>
+    <span th:text="${story.id}">id</span> -
+    <span th:text="${story.summary}">summary</span> -
+    <span th:text="${story.description}">description</span>
 </p>
-
-<form action="#" th:action="@{/story}" th:object="${storyForm}" method="post">
-    Summary: <input type="text" th:field="*{summary}"/>
-    Description: <textarea th:field="*{description}">&nbsp;</textarea>
-
-    <button type="submit">Save</button>
-</form>
 
 </body>
 
