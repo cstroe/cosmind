@@ -1,0 +1,19 @@
+version: "2.1"
+
+services:
+  db:
+    image: postgres:10
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: cosidea
+      POSTGRES_USER: cosidea
+      POSTGRES_PASSWORD: eefi4thee6phiQu9Owushi4deihii5
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - "data:/var/lib/postgresql/data"
+
+volumes:
+  data:
+    external:
+      name: "idea-db"

@@ -1,0 +1,39 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ideas</title>
+
+    <!-- Bootstrap -->
+    <link href="/webjars/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <script src="/webjars/jquery/dist/jquery.js"></script>
+    <script src="/webjars/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+Stories:
+<p th:each="story : ${stories}">
+    <span th:text="${story.summary}">summary</span> -
+    <span th:text="${story.description}">description</span>
+</p>
+
+<form action="#" th:action="@{/story}" th:object="${storyForm}" method="post">
+    Summary: <input type="text" th:field="*{summary}"/>
+    Description: <textarea th:field="*{description}">&nbsp;</textarea>
+
+    <button type="submit">Save</button>
+</form>
+
+</body>
+
+</html>
