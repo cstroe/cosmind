@@ -1,3 +1,14 @@
+-- Idea
+
+CREATE SEQUENCE idea_id_seq AS BIGINT INCREMENT BY 1 MINVALUE 1 NO MAXVALUE;
+
+CREATE TABLE idea (
+    id           BIGINT NOT NULL DEFAULT nextval('idea_id_seq'),
+    description  VARCHAR(256)
+);
+
+ALTER SEQUENCE idea_id_seq OWNED BY idea.id;
+
 -- Project
 
 CREATE SEQUENCE project_id_seq AS BIGINT INCREMENT BY 1 MINVALUE 1 NO MAXVALUE;
