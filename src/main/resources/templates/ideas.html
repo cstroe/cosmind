@@ -1,7 +1,8 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -21,8 +22,8 @@
 
 <body>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -40,20 +41,20 @@
                 <li class="active"><a href="/idea">Ideas <span class="sr-only">(current)</span></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+    </nav>
 
-Ideas:
-<p th:each="idea : ${ideas}">
-    <a href="#" th:href="@{|/idea/${idea.id}|}">
-        <span th:text="${idea.description}">description</span>
-    </a>
-</p>
+    Ideas:
+    <p th:each="idea : ${ideas}">
+        <a href="#" th:href="@{|/idea/${idea.id}|}">
+            <span th:text="${idea.description}">description</span>
+        </a>
+    </p>
 
-<form action="#" th:action="@{/idea}" th:object="${ideaForm}" method="post">
-    Description: <input type="text" th:field="*{description}"/>
-    <button type="submit">Save</button>
-</form>
+    <form action="#" th:action="@{/idea}" th:object="${ideaForm}" method="post">
+        Description: <input type="text" th:field="*{description}"/>
+        <button type="submit">Save</button>
+    </form>
+</div><!-- /.container-fluid -->
 
 </body>
 </html>
