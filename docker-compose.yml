@@ -12,3 +12,9 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - "./.data:/var/lib/postgresql/data"
+  cosidea:
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/cosidea

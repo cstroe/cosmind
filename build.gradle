@@ -62,3 +62,7 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.boot:spring-boot-test-autoconfigure')
 }
+
+bootJar {
+    archiveName = "cosidea-boot.jar"
+}
