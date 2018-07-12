@@ -18,7 +18,7 @@ apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.github.cstroe.cosidea'
+group = 'com.github.cstroe.cosmind'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 10
 
@@ -64,5 +64,5 @@ dependencies {
 }
 
 bootJar {
-    archiveName = "cosidea-boot.jar"
+    archiveName = "cosmind-boot.jar"
 }

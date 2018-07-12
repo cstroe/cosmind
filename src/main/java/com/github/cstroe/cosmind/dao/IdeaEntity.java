@@ -1,33 +1,24 @@
-package com.github.cstroe.cosidea.dao;
+package com.github.cstroe.cosmind.dao;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "story")
-public class StoryEntity {
+@Table(name = "idea")
+public class IdeaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_seq")
     @SequenceGenerator(name = "id_seq", sequenceName = "story_id_seq")
     private Long id;
 
     @Column
-    private String summary;
-
-    @Column
     private String description;
-
-    public StoryEntity() {}
 
     public Long getId() {
         return id;
     }
 
-    public String getSummary() {
-        return summary;
-    }
-
-    public void setSummary(String summary) {
-        this.summary = summary;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDescription() {

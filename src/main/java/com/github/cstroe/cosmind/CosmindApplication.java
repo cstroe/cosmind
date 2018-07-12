@@ -1,4 +1,4 @@
-package com.github.cstroe.cosidea;
+package com.github.cstroe.cosmind;
 
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class CosideaApplication {
+public class CosmindApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CosideaApplication.class, args);
+        SpringApplication.run(CosmindApplication.class, args);
     }
 
     @Bean

@@ -1,8 +1,8 @@
-package com.github.cstroe.cosidea.web;
+package com.github.cstroe.cosmind.web;
 
-import com.github.cstroe.cosidea.dao.StoryEntity;
-import com.github.cstroe.cosidea.repo.StoryRepository;
-import com.github.cstroe.cosidea.web.idea.StoryForm;
+import com.github.cstroe.cosmind.dao.StoryEntity;
+import com.github.cstroe.cosmind.repo.StoryRepository;
+import com.github.cstroe.cosmind.web.idea.StoryForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package com.github.cstroe.cosidea.vdo;
+package com.github.cstroe.cosmind.vdo;
 
 public class StoryVdo {
     private String summary;

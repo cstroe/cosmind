@@ -1,6 +1,6 @@
-package com.github.cstroe.cosidea.web;
+package com.github.cstroe.cosmind.web;
 
-import com.github.cstroe.cosidea.repo.IdeaRepository;
+import com.github.cstroe.cosmind.repo.IdeaRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;

@@ -6,15 +6,15 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_DB: cosidea
-      POSTGRES_USER: cosidea
+      POSTGRES_DB: cosmind
+      POSTGRES_USER: cosmind
       POSTGRES_PASSWORD: eefi4thee6phiQu9Owushi4deihii5
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - "./.data:/var/lib/postgresql/data"
-  cosidea:
+  cosmind:
     build: .
     ports:
       - 8080:8080
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/cosidea
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/cosmind

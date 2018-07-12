@@ -1,8 +1,8 @@
-package com.github.cstroe.cosidea.web;
+package com.github.cstroe.cosmind.web;
 
-import com.github.cstroe.cosidea.dao.IdeaEntity;
-import com.github.cstroe.cosidea.repo.IdeaRepository;
-import com.github.cstroe.cosidea.web.idea.IdeaForm;
+import com.github.cstroe.cosmind.dao.IdeaEntity;
+import com.github.cstroe.cosmind.repo.IdeaRepository;
+import com.github.cstroe.cosmind.web.idea.IdeaForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

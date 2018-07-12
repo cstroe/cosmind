@@ -1,3 +1,3 @@
-# Cosidea
+# cosMind
 
-A web app to keep track of ideas.
+Organize and develop your ideas and related tasks.

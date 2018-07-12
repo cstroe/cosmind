@@ -1,4 +1,4 @@
-package com.github.cstroe.cosidea.web.idea;
+package com.github.cstroe.cosmind.web.idea;
 
 public class IdeaForm {
     private String description;

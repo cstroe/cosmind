@@ -1,7 +1,7 @@
-package com.github.cstroe.cosidea.service;
+package com.github.cstroe.cosmind.service;
 
-import com.github.cstroe.cosidea.dao.StoryEntity;
-import com.github.cstroe.cosidea.vdo.StoryVdo;
+import com.github.cstroe.cosmind.dao.StoryEntity;
+import com.github.cstroe.cosmind.vdo.StoryVdo;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.github.cstroe.cosidea.dao;
+package com.github.cstroe.cosmind.dao;
 
 import javax.persistence.*;
 
