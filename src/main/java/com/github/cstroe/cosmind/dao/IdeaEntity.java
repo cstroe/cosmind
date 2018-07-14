@@ -6,8 +6,6 @@ import javax.persistence.*;
 @Table(name = "idea")
 public class IdeaEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_seq")
-    @SequenceGenerator(name = "id_seq", sequenceName = "story_id_seq")
     private Long id;
 
     @Column
