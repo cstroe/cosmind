@@ -70,5 +70,5 @@ dependencies {
 }
 
 bootJar {
-    archiveName = "cosmind-boot.jar"
+    archiveName = "app.jar"
 }
