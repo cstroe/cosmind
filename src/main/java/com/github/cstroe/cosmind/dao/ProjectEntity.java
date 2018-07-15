@@ -1,6 +1,7 @@
 package com.github.cstroe.cosmind.dao;
 
 import javax.persistence.*;
+import java.time.ZonedDateTime;
 
 @Entity
 @Table(name = "project")
@@ -20,7 +21,7 @@ public class ProjectEntity {
     private String url;
 
     @Column(name = "created_date", insertable = false)
-    private String createdDate;
+    private ZonedDateTime createdDate;
 
     public Long getId() {
         return id;
@@ -54,7 +55,7 @@ public class ProjectEntity {
         this.url = url;
     }
 
-    public String getCreatedDate() {
+    public ZonedDateTime getCreatedDate() {
         return createdDate;
     }
 }
