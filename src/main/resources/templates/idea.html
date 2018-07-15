@@ -48,6 +48,10 @@
         <a href="#" th:href="@{|/idea/${idea.id}|}">
             <span th:text="${idea.description}">description</span>
         </a>
+
+        <ul>
+            <li>Created: <span th:text="${idea.createdDate}">some date</span></li>
+        </ul>
     </p>
 </div><!-- /.container-fluid -->
 

@@ -19,6 +19,9 @@ public class ProjectEntity {
     @Column
     private String url;
 
+    @Column(name = "created_date", insertable = false)
+    private String createdDate;
+
     public Long getId() {
         return id;
     }
@@ -49,5 +52,9 @@ public class ProjectEntity {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getCreatedDate() {
+        return createdDate;
     }
 }

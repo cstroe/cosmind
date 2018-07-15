@@ -1,6 +1,7 @@
 package com.github.cstroe.cosmind.dao;
 
 import javax.persistence.*;
+import java.time.ZonedDateTime;
 
 @Entity
 @Table(name = "story")
@@ -15,6 +16,9 @@ public class StoryEntity {
 
     @Column
     private String description;
+
+    @Column(name = "created_date", insertable = false)
+    private ZonedDateTime createdDate;
 
     public StoryEntity() {}
 
@@ -36,5 +40,9 @@ public class StoryEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ZonedDateTime getCreatedDate() {
+        return createdDate;
     }
 }
