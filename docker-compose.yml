@@ -10,8 +10,15 @@ services:
       POSTGRES_USER: cosmind
       POSTGRES_PASSWORD: eefi4thee6phiQu9Owushi4deihii5
       PGDATA: /var/lib/postgresql/data/pgdata
+    #volumes:
+    #  - "./.data:/var/lib/postgresql/data"
+
+  selenium:
+    image: selenium/standalone-firefox
+    ports:
+      - "4444:4444"
     volumes:
-      - "./.data:/var/lib/postgresql/data"
+      - /dev/shm:/dev/shm
   cosmind:
     build: .
     ports:

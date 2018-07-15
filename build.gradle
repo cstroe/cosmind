@@ -26,6 +26,30 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+    integrationTest {
+        java {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+            srcDir file('src/it/java')
+        }
+        resources.srcDir file('src/it/resources')
+    }
+}
+
+configurations {
+    integrationTestCompile.extendsFrom testCompile
+    integrationTestRuntime.extendsFrom testRuntime
+}
+
+task integrationTest(type: Test) {
+    testClassesDirs = sourceSets.integrationTest.output.classesDirs
+    classpath = sourceSets.integrationTest.runtimeClasspath
+
+    doFirst {
+        dockerCompose.exposeAsEnvironment(integrationTest)
+    }
+}
 
 dependencies {
     // code generation
@@ -67,6 +91,9 @@ dependencies {
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.boot:spring-boot-test-autoconfigure')
+
+    integrationTestCompile('org.seleniumhq.selenium:selenium-java:3.13.0')
+    integrationTestCompile('org.seleniumhq.selenium:selenium-remote-driver:3.13.0')
 }
 
 bootJar {

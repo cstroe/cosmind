@@ -44,7 +44,7 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 
-    Ideas:
+    <h1 id="ideas-header">Ideas:</h1>
     <p th:each="idea : ${ideas}">
         <a href="#" th:href="@{|/idea/${idea.id}|}">
             <span th:text="${idea.description}">description</span>
