@@ -1,6 +1,6 @@
 # cosMind
 
-Organize and develop your ideas and related tasks.
+Organize, develop, and research your ideas and turn them into projects.  Track your projects and ensure that you're makingprogress.
 
 ## Build Docker image
 
